@@ -1,0 +1,13 @@
+#!/bin/bash
+song=$1
+file=dnb-favourites.txt
+msg="added '$song'"
+
+
+cd ~/various
+echo $song >> $file
+git add $file
+git ci -m $msg
+git push
+
+echo $msg
