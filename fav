@@ -7,7 +7,7 @@ msg="added '$song'"
 cd ~/various
 echo $song >> $file
 git add $file
-git ci -m $msg
-git push
+git ci -m "$msg"
+git push origin master
 
 echo $msg
