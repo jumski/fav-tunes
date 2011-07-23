@@ -1,7 +1,8 @@
 #!/bin/bash
-song=$1
-file=dnb-favourites.txt
-msg="added '$song'"
+kind=$1
+song=$2
+file=$kind-favourites.txt
+msg="added '$song' to $1"
 
 
 cd ~/various
