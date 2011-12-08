@@ -1,12 +1,13 @@
 #!/bin/bash
 kind=$1
 song=$2
+[ "$song" != "" ] || song=`mocp -i | grep SongTitle | awk {'gsub("SongTitle: ", ""); print $0'}`
+
 file=$kind-favourites.txt
 msg="added '$song' to $1"
 
-
 cd ~/various
-echo $song >> $file
+echo "$song" >> $file
 git add $file
 git ci -m "$msg"
 git push origin master
