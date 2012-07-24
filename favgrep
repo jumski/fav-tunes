@@ -1,0 +1,3 @@
+#!/bin/bash
+
+ack-grep -i "$1" $HOME/various/*-favourites.txt
