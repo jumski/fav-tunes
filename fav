@@ -8,8 +8,8 @@ msg="added '$song' to $1"
 
 cd ~/various
 echo "$song" >> $file
-git add $file
-git ci -m "$msg"
-git push origin master
-
+git add $file          2>&1 >/dev/null
+git ci -m "$msg"       2>&1 >/dev/null
+git pull --rebase      2>&1 >/dev/null
+git push origin master 2>&1 >/dev/null
 echo $msg
